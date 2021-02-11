@@ -26,9 +26,19 @@ allprojects {
     apply plugin: "io.spring.dependency-management"
     dependencyManagement {
         dependencies {
+            imports {
+                mavenBom("org.springframework.boot:spring-boot-dependencies:2.3.1.RELEASE")
+            }
             dependency("com.google.guava:guava:${Versions.guava}")
+//            dependency("org.junit.jupiter:junit-jupiter-api:${Versions.junit}")
+//            dependency("org.assertj:assertj-core:${Versions.assertJ}")
+
         }
     }
+}
+
+repositories {
+    mavenCentral()
 }
 
 //gradle -q hello
