@@ -26,7 +26,6 @@ public class EntityClassMetaDataImpl implements EntityClassMetaData {
                     .filter(it -> it.isAnnotationPresent(Id.class))
                     .findFirst().orElseThrow(RuntimeException::new);
             this.fields = Arrays.stream(clazz.getDeclaredFields())
-                    .sorted(Comparator.comparing(Field::getName))
                     .collect(Collectors.toList());
             this.fieldsWithoutId = Arrays.stream(clazz.getDeclaredFields())
                     .filter(it -> !it.isAnnotationPresent(Id.class))
