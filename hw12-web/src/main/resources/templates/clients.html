@@ -1,0 +1,32 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Клиенты</title>
+</head>
+
+<body>
+<h4>Клиенты</h4>
+<table style="width: 400px">
+    <thead>
+        <tr>
+            <td style="width: 50px">Id</td>
+            <td style="width: 150px">Имя</td>
+            <td style="width: 100px">Логин</td>
+            <td style="width: 100px">Пароль</td>
+        </tr>
+    </thead>
+    <tbody>
+        <#list clients as client>
+            <tr>
+                <td>${client.id}</td>
+                <td>${client.name}</td>
+                <td>${client.login}</td>
+                <td>${client.password}</td>
+            </tr>
+        </#list>
+    </tbody>
+</table>
+<br>
+<a href="/clients/new">Создать нового клиента</a>
+
+</body>
+</html>
