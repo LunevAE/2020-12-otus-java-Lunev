@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5430/demoDB
+    driver-class-name: org.postgresql.Driver
+    password: pwd
+    username: usr
+
+logging:
+  level:
+    org.springframework.jdbc.core.JdbcTemplate: debug
