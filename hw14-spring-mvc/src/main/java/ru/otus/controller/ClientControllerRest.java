@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import ru.otus.model.Client;
-import ru.otus.service.ClientServiceImpl;
+import ru.otus.service.ClientService;
 
 @RestController
 public class ClientControllerRest {
 
-    private final ClientServiceImpl clientService;
+    private final ClientService clientService;
 
-    public ClientControllerRest(ClientServiceImpl clientService) {
+    public ClientControllerRest(ClientService clientService) {
         this.clientService = clientService;
     }
 

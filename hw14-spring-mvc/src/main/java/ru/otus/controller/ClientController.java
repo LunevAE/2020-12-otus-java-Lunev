@@ -11,7 +11,7 @@ import ru.otus.dto.ClientDto;
 import ru.otus.model.AddressDataSet;
 import ru.otus.model.Client;
 import ru.otus.model.PhoneDataSet;
-import ru.otus.service.ClientServiceImpl;
+import ru.otus.service.ClientService;
 
 import java.util.List;
 import java.util.Set;
@@ -19,9 +19,9 @@ import java.util.Set;
 @Controller
 public class ClientController {
 
-    private final ClientServiceImpl clientService;
+    private final ClientService clientService;
 
-    public ClientController(ClientServiceImpl clientService) {
+    public ClientController(ClientService clientService) {
         this.clientService = clientService;
     }
 
